@@ -1,0 +1,51 @@
+.employer-jobs-page { padding: var(--space-8) 0 var(--space-16); }
+
+.employer-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.employer-stats {
+  display: flex;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.emp-stat {
+  flex: 1;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.emp-stat-num {
+  font-size: 32px;
+  font-weight: 800;
+  font-family: var(--font-display);
+  color: var(--accent);
+}
+
+.emp-stat span:last-child {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.emp-jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: var(--space-5);
+}
+
+@media (max-width: 640px) {
+  .employer-header { flex-direction: column; }
+  .employer-stats { flex-wrap: wrap; }
+  .emp-stat { min-width: calc(50% - var(--space-2)); }
+  .emp-jobs-grid { grid-template-columns: 1fr; }
+}

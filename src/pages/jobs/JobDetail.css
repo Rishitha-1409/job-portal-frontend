@@ -1,0 +1,165 @@
+.job-detail-page { padding: var(--space-8) 0 var(--space-16); }
+
+.job-detail-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.job-detail-main { display: flex; flex-direction: column; gap: var(--space-4); }
+
+.job-detail-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.job-detail-company {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.company-logo-lg {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.company-logo-lg img { width: 100%; height: 100%; object-fit: contain; }
+
+.company-name-lg { font-size: 17px; font-weight: 600; color: var(--ink); }
+.company-location { font-size: 13px; color: var(--muted); }
+
+.job-detail-title { font-size: 28px; font-weight: 800; color: var(--ink); }
+
+.job-detail-tags { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+
+.job-detail-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.apply-btn { align-self: flex-start; }
+
+.apply-cta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.apply-hint { font-size: 14px; color: var(--muted); }
+
+/* Content sections */
+.job-detail-section { display: flex; flex-direction: column; gap: var(--space-4); }
+.section-h2 { font-size: 20px; font-weight: 700; }
+
+.prose {
+  font-size: 15px;
+  color: var(--slate);
+  line-height: 1.8;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.skills-list { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.skill-tag-lg {
+  padding: 6px 14px;
+  background: var(--accent-light);
+  color: var(--accent);
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Sidebar */
+.job-detail-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  position: sticky;
+  top: 80px;
+}
+
+.sidebar-card { display: flex; flex-direction: column; gap: var(--space-3); }
+.sidebar-title { font-size: 14px; font-weight: 700; color: var(--slate); text-transform: uppercase; letter-spacing: 0.05em; }
+
+.salary-display { font-size: 22px; font-weight: 800; color: var(--ink); }
+.salary-period { font-size: 13px; color: var(--muted); }
+
+.tags-list { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+
+.overview-list { display: flex; flex-direction: column; gap: var(--space-3); }
+.overview-item { display: flex; justify-content: space-between; font-size: 14px; }
+.ov-label { color: var(--muted); }
+.ov-val { font-weight: 500; color: var(--ink); }
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10,10,15,0.5);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+}
+
+.modal-box {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  width: 100%;
+  max-width: 560px;
+  box-shadow: var(--shadow-lg);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-6);
+}
+
+.modal-header h2 { font-size: 22px; font-weight: 700; }
+
+.modal-close {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: var(--surface);
+  color: var(--slate);
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+}
+
+.modal-close:hover { background: var(--border); }
+
+.modal-form { display: flex; flex-direction: column; gap: var(--space-5); }
+.modal-footer { display: flex; justify-content: flex-end; gap: var(--space-3); padding-top: var(--space-4); border-top: 1px solid var(--border); }
+
+@media (max-width: 900px) {
+  .job-detail-layout { grid-template-columns: 1fr; }
+  .job-detail-sidebar { position: static; }
+}
